@@ -1,0 +1,87 @@
+/*
+1. Ifyourcountrysplitinhalf,andeachhalfwouldcontainhalfthepopulation, then how many people would live in each half?
+2. Increasethepopulationofyourcountryby1andlogtheresulttotheconsole
+3. Finlandhasapopulationof6million.Doesyourcountryhavemorepeoplethan
+Finland?
+4. Theaveragepopulationofacountryis33millionpeople.Doesyourcountry
+have less people than the average country?
+5. Basedonthevariablesyoucreated,createanewvariable'description'
+which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'
+6. Recreatethe'description'variablefromthelastassignment,thistime using the template literal syntax
+*/
+
+twotothepowerofthree = 2**3;
+
+const country = 'usa';
+const continent = 'north america';
+let population = 329500000;
+let language = 'english'
+
+//combining strings
+console.log(country + ' ' + continent)
+
+
+//basic ops
+let newpopulation = population / 2;
+newpopulation = newpopulation++;
+let finland = 6000000
+
+//basic if else
+if(newpopulation > finland)
+    alert(newpopulation + " new population is > finlands");
+else
+    alert("new population is < finlands");
+console.log(newpopulation);
+
+let avgpop = 33000000;
+
+if(newpopulation > avgpop)
+    alert("new population:"+newpopulation+" is greater than the average population of " + avgpop);
+else
+    alert("new population:"+newpopulation+" is less than the average population of " + avgpop);
+
+description = 'Portuagal is in Europe and its 11 million people speak portugues';
+
+
+
+
+// turning 13,000,000 into 13.
+let testpopulation = population.toString();
+let slicedpop;
+if(testpopulation.length == 7) {//1 million
+    slicedpop = testpopulation.substring(0,1)
+    console.log(slicedpop)
+}
+
+else if (testpopulation.length == 8) {// 10 milliom
+    slicedpop = testpopulation.substring(0,2)
+    console.log(slicedpop)
+}
+else if (testpopulation.length == 9) {// 100 million
+    slicedpop = testpopulation.substring(0,3)
+    console.log(slicedpop)
+}
+newdescription = country + ' is in ' + continent + ' and its ' + slicedpop + ' million people speak ' + language + '.' ;
+alert(newdescription);
+
+
+switch (language) {
+    case 'chinese':
+    case 'mandarin':
+      console.log('MOST number of native speakers!');
+      break;
+    case 'spanish':
+      console.log('2nd place in number of native speakers');
+      break;
+    case 'english':
+      console.log('3rd place');
+      break;
+    case 'hindi':
+      console.log('Number 4');
+      break;
+    case 'arabic':
+      console.log('5th most spoken language');
+      break;
+    default:
+      console.log('Great language too :D');
+  }

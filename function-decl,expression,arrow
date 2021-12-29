@@ -1,0 +1,56 @@
+//Part 1 Basic functions
+function describcountry (country, population, capitalcity){
+    x = String(population);
+    if (x.length == 7){
+        // 1 million
+        population = x.substring(0,1);
+    }
+    else if(x.length == 8){
+        // 10 million
+        population = x.substring(0,2);
+    }
+    else if(x.length == 9){
+        //100 million
+        population = x.substring(0,3);
+    }
+    else if(x.length > 9){
+        console.log('Error in pop');
+        return;
+    }
+    console.log(`${country} has ${population} million people and its capital city is ${capitalcity}`);
+}
+
+describcountry('Finland', 600000000, 'Helsinki');
+
+
+//Part 2 function declarations vs expression
+
+//function declaration
+function percentageofworld1(population){
+    //returns % of world population
+    return (population / 79000)* 100;
+}
+console.log(percentageofworld1(50000000));
+console.log(percentageofworld1(9999999999));
+console.log(percentageofworld1(991232133));
+
+//function expression
+const xy = function(population){
+    return (population/79000)*100;
+}
+
+console.log(xy(50000000));
+
+
+
+//Part 3 arrow function
+
+const percentageofworld3 = population => population/790000*100;
+console.log('arrow')
+console.log(percentageofworld3(50000000));
+        //or
+
+const percentageofworld4 = population=>{
+    return population/790000*100;
+}
+console.log('arrow',percentageofworld4(1123123123123));

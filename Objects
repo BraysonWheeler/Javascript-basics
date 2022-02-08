@@ -1,0 +1,50 @@
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+// Write your code below
+let alienShip = {
+  retreat(){
+    console.log(retreatMessage)
+  },
+  takeOff(){
+    console.log('Spim... Borp... Glix... Blastoff!')
+  }
+}
+
+alienShip.retreat()
+alienShip.takeOff()
+
+
+// Write your fasterShip object literal below
+let fasterShip = {
+  'Fuel Type': 'Turbo Fuel',
+  color: 'silver'
+};
+
+//accessing object
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver',
+  'Fuel Type': 'Turbo Fuel',
+  numCrew: 5,
+  flightPath: ['Venus', 'Mars', 'Saturn']
+};
+
+// Write your code below
+let crewCount = spaceship.numCrew
+
+let planetArray = spaceship.flightPath
+
+let x = spaceship['flightPath']
+
+////////////////////////////////////////////////////////////////////////////////////
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+// Write your code below
+spaceship.color = 'glorious gold'
+spaceship.numEngines = 5 // assign numEnginer to spaceship object
+delete spaceship['Secret Mission'] //removing element

@@ -21,3 +21,32 @@ console.log(lightWaves)
 
 
 //lightwaves cant be reached from outside the function
+
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+let stars = 'North Star';
+
+const callMyNightSky = () => {
+  stars = 'Sirius'
+	return 'Night Sky: ' + satellite + ', ' + stars + ', ' + galaxy;
+};
+
+console.log(callMyNightSky());
+
+console.log(stars)
+
+//global var stars is changed to sirius when called on line 36
+
+
+const logVisibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+	let region = 'The Arctic';
+  // Add if statement here:
+  if(region === 'The Arctic'){
+    let lightWaves = 'Northern Lights'
+    console.log(lightWaves) // logs northernlights
+  }
+  console.log(lightWaves); // logs Moonlught
+};
+
+logVisibleLightWaves();
